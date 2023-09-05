@@ -1,0 +1,446 @@
+<!-- 
+Author: Karina de Vargas Pereira
+ID: 2300594
+Date: September 01, 2023
+Description:    html for single product page: 
+                Individual Course Page: Detailed pages for single course, providing in-depth information 
+                like course details, instructor details, course duration, and a call to action (like "Enroll Now" or "Add to Cart").
+Copyright: 2023
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CODE WISE | Website design/HTML/CSS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Version: 5.3.1 -->
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+  crossorigin="anonymous"
+  />
+
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+  <!-- Main CSS File & Nav Bar CSS file -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/nav-bar/login_style_nav-bar.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <!-- <header id="header" class="fixed-top"> -->
+    <!-- <div class="container d-flex align-items-center"> -->
+      
+      <nav>
+        <!-- Navigation container -->
+        <div class="container">
+            <!-- Hamburger Icon -->
+            <div class="hamburger-icon" >
+                &#9776
+            </div>        
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas">
+                <a href="#" class="login-link">Login</a>
+                <a href="#">Signup</a>
+                <a href="#">Browse</a>
+                <a href="#">Support</a>
+            </div>
+            
+            <!-- Left section of navigation (logo, search bar etc.) -->
+            <div class="nav_left_container">  
+                <!-- Logo -->
+                <div class="item">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/01.logo.png" height="30" width="100" alt="Website Logo">
+                    </a>
+                </div>
+                <!-- Adjust the browser link -->
+                <div class="item"> 
+                    <a href="#" class="browser-item">Browser</a> 
+                </div>
+                <!-- Search form -->
+                <form class="item search-form">
+                    <input type="text" id="input_search" placeholder=" What do you want to learn?" />
+                    <button type="submit" class="search-btn"> 🔍 </button>
+                </form>
+            </div>  
+            <!-- Right section of navigation (cart, login button) -->
+            <div class="nav_right_container">
+                <!-- Search Button -->
+                <button class="search-btn-small">🔍</button>
+                <!-- Cart button -->
+                <button class="cart-btn"><i class="bi bi-cart"></i></button>
+                <!-- Login button -->
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </nav>    
+  <!-- end of nav bar -->
+
+
+  <!-- </div>
+  </header> -->
+  <!-- End Header -->
+
+  
+  <main id="main">
+
+    <!-- ======= Course Details Top ======= -->
+    <div class="separatorSubject">
+      <div class="container">
+        <h2>Course Details</h2>
+        <p>Code Wise Web Design course leads the student through the entire Web site creation process, 
+          while developing and enhancing their HTML, CSS, and creative design skills along the way.
+        </p>
+      </div>
+    </div>
+    <!-- End Course Details Top -->
+
+
+    <!-- ======= Course Details Section ======= -->
+    <section id="course-details" class="course-details">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <img src="assets/img/course-details.jpg" class="img-fluid" alt="Code Wise Student">
+            <h3>Website Design/HTML/CSS</h3>
+            <p>
+              This course introduces the concept of responsive web design which allows 
+              you to control a websites’ appearances on multiple screen sizes. Students 
+              will explore design strategies for laying out content, 
+              graphics, and navigation for multi-page websites. A wire-framing tool, 
+              such as Adobe XD, will be used to create mock-ups and user interface designs.
+            </p>
+
+            <div class="add-to-cart-btn text-center">
+            <a href="#" class="btn btn-outline-dark btn-lg">APPLY TODAY!</a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4">
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Main Teacher</h5>
+              <p><a href="#">Walter White</a></p>
+            </div>
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Course Length</h5>
+              <p>942 hours</p>
+            </div>
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Course Fee</h5>
+              <p>$1650</p>
+            </div>
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Available Seats</h5>
+              <p>30</p>
+            </div>
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Schedule</h5>
+              <p>9.00 am - 3.00 pm</p>
+            </div>
+
+            <div class="add-to-cart-btn text-center">
+            <a href="#" class="btn btn-outline-dark btn-lg">ADD TO CART</a>
+            </div>
+          </div>   
+
+        </div>  
+
+      </div>
+    </section>
+    <!-- End Cource Details Section -->
+
+
+    <!-- ======= separator ======= -->
+    <div class="separatorSubject">
+      <div class="container">
+        <h2>Our Team</h2>
+        <p>We see our instructors as mentors and learning catalysts whose supervision and guidance empowers students to achieve expertise in advanced information technology.
+          These talented resources, with proven track records, work in tandem with our advisors to provide an inspiring and enduring learning experience that translates into career success.
+          </p>
+      </div>
+    </div>
+    <!-- End separator -->
+
+
+    <!-- ======= Trainers/Instructor Section ======= -->
+    <section id="trainers" class="trainers">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Walter White</h4>
+                <span>Web Development Instructor</span>
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                </p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Sarah Jhinson</h4>
+                <span>HTML Instructor</span>
+                <p>
+                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>William Anderson</h4>
+                <span>CSS and JS Instructor</span>
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Trainers/Instructor Section -->
+
+  
+  <!-- ======= separator ======= -->
+  <div class="separatorSubject" >
+    <div class="container">
+      <h2>Earn a career certificate</h2>
+      <p>Enroll today and add this credential to your LinkedIn profile, resume, and CV. 
+        Share it on social media and in your performance review.
+      </p>
+    </div>
+  </div>
+  <!-- End separator -->
+
+
+  <!-- ======= Courses Section ======= -->
+  <section id="courses" class="courses">
+    <div class="container">
+      <div class="row">
+        
+        <!-- Course Item 1 (empty)-->
+        <div class="col-sm-4"></div>
+        <!-- End Course Item 1-->
+
+       
+        <!-- Course Item 2-->
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top" src="assets/img/course-1.jpg" alt="Card image cap">            
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>Web Development</h4>
+                  <p class="price">$1650</p>
+                </div>  
+                <h3><a href="#">Website Design</a></h3>
+                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+                    <span>Walter White</span>
+                  </div>
+                  <div class="trainer-rank d-flex align-items-center">
+                    <i class="bi bi-person"></i>&nbsp;50
+                    &nbsp;&nbsp;
+                    <i class="bi bi-heart"></i>&nbsp;65
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Course Item 2-->
+
+        <!-- Course Item 3 (empty)-->
+        <div class="col-sm-4"></div>
+        <!-- End Course Item 3-->
+
+      </div>
+     </div>
+   </div>
+   </section>
+   <!-- End Courses Section -->
+
+
+<!-- ======= Enroll Now & More info ======= -->
+<section id="courses-enroll" class="courses">
+  <div class="container">
+    <div class="row">
+      <!-- Course Apply now -->
+      <div class="col-sm-6 text-center">
+        <h2>Enroll today!</h2>
+            <p>Ready to apply? Hooray! We look forward to meeting you.
+            </p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-outline-dark btn-lg">ADD TO CART</a>
+            </div>
+            <hr> 
+      </div>
+      <!-- End Course Apply now -->
+
+      <!-- Course More info -->
+      <div class="col-sm-6 text-center">
+        <h2>Need more information?</h2>
+            <p>Talk to a Code Wise Advisor.
+              One of our experts will reach out to you.
+            </p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-outline-dark btn-lg">GET MORE INFORMATION</a>
+            </div>
+            <hr> 
+      </div>
+      <!-- End Course More info -->
+
+    </div>
+  </div> 
+</section>
+<!-- End Enroll Now & More info -->
+
+
+</main>
+<!-- End #main -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>CODE WISE</h3>
+            <p>
+              1234 Adam Street <br>
+              Montreal, QC<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@CODEWISE.com<br>
+            </p>
+          </div>
+
+          <!-- <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div> -->
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Code Wise</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="#">TEAM 5</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+ <!-- Preloader back-to-top -->
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+ <!-- End Preloader back-to-top -->
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+   
+</body>
+</html>

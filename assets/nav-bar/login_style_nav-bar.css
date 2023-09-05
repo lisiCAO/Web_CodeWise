@@ -1,0 +1,353 @@
+/* File: login_page.html
+    Author: Lisi Cao
+    Date: August 31, 2023
+    Description: click button "login", turn to page login.
+    Contact: lisi.cao@johnabbottcollege.net
+    Copyright: 2023 
+*/
+
+:root {
+    --nav-bg-color: 111;
+    --text-light-color: lightgrey;
+    --gap-value: 30px;
+}
+
+/* Global styles */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    inline-size: 1.5;
+    width: 100%;
+}
+/* Navigation styles */
+nav {
+    background-color: #111;
+    width: 100%;
+    height: 60px;
+}
+/* Container to align items in nav */
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-light-color);
+    height: 60px;
+    padding: 0 var(--gap-value);
+    background-color: #111;
+}
+/* Navbar left container */
+.nav_left_container{
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    gap: var(--gap-value);
+}
+
+.nav_left_container a{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--nav-bg-color);
+    color: var(--text-light-color);
+    font-weight: 900; 
+}
+
+.nav_left_container input{
+    color: var(--text-light-color);
+    background-color: #151515;
+    border-radius: 25px;
+    font-size: smaller;
+    width: 400px;
+    height: 40px;
+    text-indent: 50px;
+    border: 0.5px solid #151515 ;
+    outline: none;
+    box-shadow: none;
+}
+.search-form{
+    position:relative;
+}
+.search-btn {
+    position:absolute;
+    right: 350px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; 
+    color: var(--text-light-color);
+    font-weight: 900;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Nav bar right container */
+.nav_right_container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:var(--gap-value);
+}
+
+.search-btn-small {
+    display: none;
+}
+
+.login-btn, .cart-btn{
+    cursor: pointer;
+    background-color: var(--nav-bg-color);
+    color:var(--text-light-color);
+    font-weight: 900;     
+    border: none;           
+    outline: none;                 
+    padding: 0;                      
+    font: inherit;          
+    text-align: inherit;
+}
+
+/* Login modal */
+.login-modal{
+    display: none;
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* login modal structure */
+.login-modal .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    max-width: 600px; 
+    max-height: 100%;
+    background-color: #FBFBFB;
+    padding: 20px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 1001; 
+    gap: 20px;
+}
+
+
+.login-modal .container > :first-child {
+    align-self: flex-end;
+    cursor: pointer;
+    height: 10px;
+}
+
+.login-modal .container > :not(:first-child) {
+    align-self: center;
+
+}
+/* modal header  */
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.header_container .new_account_container{
+    font-size: smaller;
+    color: lightslategrey;
+}
+
+.header_container .new_account_container a{
+    text-decoration: underline;
+    font-weight: 700;
+    color: rgb(128, 128, 128);
+    cursor: pointer;
+}
+/* login input form */
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 200px;
+    padding: 0 20px;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 60px;
+}
+
+ .input-container label {
+    position: absolute;
+    background: white;
+    padding: 0 5px;
+    font-size: 18px;
+    color: darkgrey;
+    left: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;  
+    transition: all 0.3s;
+}
+.input-container input{
+    height: 100%;
+    width: 100%;
+    border: 0.5px solid var(--text-light-color);
+    border-radius: 5px;
+    text-indent: 20px;
+    outline: none;
+    box-shadow:none;
+} 
+
+.input-container.focused label {
+    top: -6px; 
+    left: 10px;
+    font-size: 12px;
+    transform: translateY(0);
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: var(--text-light-color); 
+}
+
+/* login button and footer */
+.submit-btn {
+    max-width:25%;
+    padding: 10px;
+    border: none;
+    background-color: var(--nav-bg-color);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+}
+.submit-btn:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.forgot-password {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: rgb(128, 128, 128);
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+} 
+
+.hamburger-icon, .offcanvas {
+    display: none;
+}
+.hamburger-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+.offcanvas {
+    display: block;  /* Initially hidden */
+    position: fixed;
+    top: 60px; /* height of navbar */
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #151515;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+    z-index: 100;
+}
+
+.offcanvas.active {
+    transform: translateX(0);
+}
+
+.offcanvas a {
+    display: block;
+    color: var(--text-light-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-bottom: 1px solid gray;
+}
+
+.offcanvas a:hover {
+    background-color: #222;
+}
+
+
+@media (max-width: 768px) {
+    /* Show hamburger, offcanvas, and new search button */
+    .hamburger-icon, .search-btn-small {
+        display: inline-block;
+    }
+
+    /* Hide specified nav elements */
+    .browser-item, 
+    .nav_left_container form,
+    .nav_right_container .login-btn {
+        display: none;
+    }
+
+    /* Show logo in the middle */
+    .nav_left_container .navbar-brand {
+        order: 2;
+        margin: 0 auto; /* center the logo */
+    }
+
+    /* Position the hamburger menu and other items in left */
+    .hamburger-icon,
+    .nav_left_container {
+        order: 1;
+    }
+
+    /* Position the right container items to the right */
+    .nav_right_container {
+        order: 3;
+    }
+
+    /* Display search button for smaller screens */
+    .search-btn-small {
+        display: block;
+        background-color: var(--nav-bg-color);
+        color: var(--text-light-color);
+        font-weight: 900;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+@media (min-width: 992px) { /* Bootstrap's large screen breakpoint */
+    .nav_left_container {
+        gap: 5rem;
+    }
+}
+
+.login-modal .container{
+    min-width: 500px; 
+}
+
+/* Bootstrap's media query for medium screens */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .login-modal .container {
+        min-width: 60%; 
+}
+
+/* Bootstrap's media query for large screens */
+@media (min-width: 992px) {
+    .login-modal .container {
+        min-width: 40%; 
+    }
+}
