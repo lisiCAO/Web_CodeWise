@@ -1,0 +1,235 @@
+<!-- 
+    Author: Boudribila, Amine
+    Date: August 31, 2023
+    Description: Checkout Page
+    Copyright: 2023
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeWise | Checkout Page</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="checkout-style.css">
+</head>
+
+<body>
+    <!-- Header Section  -->
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/white-logo.png" height="30" width="100" alt="Website Logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="checkout-tile big-tile">
+                    <h3>Billing Address</h3>
+                    <br>
+                    <!-- billing address form here -->
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                          <label for="validationDefault01" class="form-label">First Name</label>
+                          <input type="text" class="form-control" id="validationDefault01"  required>
+                      </div>
+                      <div class="col-md-6">
+                          <label for="validationDefault02" class="form-label">Last Name</label>
+                          <input type="text" class="form-control" id="validationDefault02"  required>
+                      </div>
+                      <div class="col-md-12">
+                          <label for="validationDefault03" class="form-label">Email Address</label>
+                          <input type="email" class="form-control" id="validationDefault03"  required>
+                      </div>
+                      <div class="col-md-12">
+                          <label for="validationDefault04" class="form-label">Street Address</label>
+                          <input type="text" class="form-control" id="validationDefault04"  required>
+                      </div>
+                      <div class="col-md-6">
+                          <label for="validationDefault05" class="form-label">Province</label>
+                          <select class="form-select" id="validationDefault05" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option value="Alberta">Alberta</option>
+                            <option value="British Columbia">British Columbia</option>
+                            <option value="Manitoba">Manitoba</option>
+                            <option value="New Brunswick">New Brunswick</option>
+                            <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                            <option value="Nova Scotia">Nova Scotia</option>
+                            <option value="Ontario">Ontario</option>
+                            <option value="Prince Edward Island">Prince Edward Island</option>
+                            <option value="Quebec">Quebec</option>
+                            <option value="Saskatchewan">Saskatchewan</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationDefault06" class="form-label">City</label>
+                      <input type="text" class="form-control" id="validationDefault06" required>
+                  </div>
+                  <div class="col-md-6">
+                      <label for="validationDefault07" class="form-label">Zip/Postal Code</label>
+                      <input type="text" class="form-control" id="validationDefault07" placeholder="A1A 1A1" required>
+                  </div>
+                  <div class="col-md-6">
+                      <label for="validationDefault08" class="form-label">Phone</label>
+                      <input type="tel" class="form-control" id="validationDefault08"  required>
+                  </div>
+                  <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2">
+                        <label class="form-check-label" for="invalidCheck2">
+                          Create an account for later use
+                      </label>
+                  </div>
+              </div>
+          </form>
+          
+      </div>
+      <div class="checkout-tile big-tile">
+        <h3>Payment Method</h3>
+        <br>
+        <div class="container p-0">
+            <div class="col-12">
+                <a href="#" class="custom-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal Logo">
+                </a>
+            </div>
+        </div>
+        <br>
+        <!-- payment method form here -->
+        <div class="container p-0">
+            <div class="card px-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="h8 py-3 mb-0"><strong>Pay with Credit Card</strong></p>
+                    <div class="icons">
+                        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa Icon"/>
+                        <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="Mastercard Icon"/>
+                    </div>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-12">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">Card Number</p>
+                            <input class="form-control mb-3" type="text" placeholder="1234 5678 435678">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">Expiry</p>
+                            <input class="form-control mb-3" type="text" placeholder="MM/YYYY" id="expiryInput">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">CVV</p>
+                            <input class="form-control mb-3 pt-2" type="password" placeholder="***">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="d-flex align-items-center">
+            <p><span class="lock-icon"><i class="fas fa-lock fa-lg "></i></span> We protect your payment information using bank-level encryption.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="checkout-tile thin-tile">
+        <h3>Order Review</h3>
+        <br>
+        <!-- order review details here -->
+        <div class="order-item">
+            <div class="row">
+                <div class="col-6">
+                    <span class="product-name">-Website Creation Course</span>
+                </div>
+                <div class="col-6 text-end">
+                    <span class="product-price"><strong>$1650.00</strong></span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        
+    </div>
+    <div class="checkout-tile thin-tile">
+        <h3>Billing Summary</h3>
+        <br>
+        <!-- billing summary details here -->
+        <div class="billing-item">
+            <div class="row">
+                <div class="col-6">
+                    <span>Subtotal</span>
+                </div>
+                <div class="col-6 text-end">
+                    <span>$1650.00</span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="billing-item">
+            <div class="row">
+                <div class="col-6">
+                    <span>Tax</span>
+                </div>
+                <div class="col-6 text-end">
+                    <span>$247.50</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="billing-item">
+            <div class="row">
+                <div class="col-6">
+                    <span><strong>Grand Total</strong></span>
+                </div>
+                <div class="col-6 text-end">
+                    <span><strong>$1897.50</strong></span>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <!-- privacy checkbox -->
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="privacyCheckbox">
+            <label class="form-check-label" for="privacyCheckbox">
+                Please check to acknowledge our Privacy & Terms Policy
+            </label>
+        </div>
+        <br>
+        <div class="container p-0">
+            <div class="col-12">
+                <div type="submit" id="checkoutButton" class="btn btn-primary mb-3">
+                    <span class="ps-3">Pay $1897.50</span>
+                    <span class="fas fa-arrow-right"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- Include Bootstrap JS (optional) -->
+<script >
+            // Get a reference to the checkout button
+    var checkoutButton = document.getElementById("checkoutButton");
+
+// Add a click event listener to the button
+    checkoutButton.addEventListener("click", function () {
+    // Redirect to the checked-out.html page
+        window.location.href = "checked-out.html";
+    });
+</script>
+</body>
+</html>
