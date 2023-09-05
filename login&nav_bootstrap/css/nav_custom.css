@@ -8,6 +8,16 @@
 /* -------------------------
    GLOBAL STYLES
 ------------------------- */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-size: 16px;
+  inline-h
+}
 
 /* Link styles for dark navbar */
 .navbar-dark .nav-link {
@@ -94,18 +104,6 @@
     transform: translateX(-50%);
   }
 }
-/* Styles for large screens: adjusting gaps */
-@media (min-width: 1200px) {
-  .nav-left-container {
-    gap: 4rem;
-  }
-}
-
-@media (min-width: 1600px) {
-  .nav-left-container {
-    gap: 7rem;
-  }
-}
 
 /* -------------------------
      LOGIN MODAL STYLES
@@ -117,22 +115,23 @@
   height: 100%;
 }
 
+/* Modal content styles */
+.modal-content {
+  background-color: #fbfbfb;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 400px;
+  padding: 2rem;
+  transform: translate(-50%, -50%);
+}
+
 /* Styles for the first child in the modal (usually a close button or icon) */
 .modal-content > :first-child {
   align-self: flex-end;
   cursor: pointer;
   height: 10px;
-  margin-right: 1rem;
-}
-
-/* Modal content styles */
-.modal-content {
-  background-color: #fbfbfb;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 2rem;
-  transform: translate(-50%, -50%);
 }
 
 /* Modal header styles */
