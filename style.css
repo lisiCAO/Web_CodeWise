@@ -21,169 +21,175 @@ body {
 /*--------------------------------------------------------------
 # Nav Section
 --------------------------------------------------------------*/
-.container {
-  max-width: 100%;
-  padding-right: 0px;
-  padding-left: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-nav {
-  background-color: black;
-  width: 100%;
-  height: 60px;
-}
-
-.nav-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar-dark .nav-link {
   color: lightgrey;
-  height: 60px;
+  font-weight: 700;
 }
 
-.nav_left_container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link:focus {
+  color: grey;
 }
 
-.logo {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 5px;
-}
-
-.nav_left_container .item {
-  margin-right: 20px;
-  position: relative;
-}
-
-.nav_left_container input {
-  margin-left: 30px;
+/* Input styles for the left navigation container */
+.nav-left-container form input {
+  color: lightgrey;
   background-color: #151515;
   border-radius: 25px;
   font-size: smaller;
-  width: 300px;
+  width: 400px;
   height: 40px;
-  text-indent: 20px;
+  text-indent: 50px;
   border: 0.5px solid #151515;
   outline: none;
   box-shadow: none;
 }
 
-.nav_right_container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.nav-left-container form input::placeholder {
+  color: grey;
 }
 
-.login-btn,
-.cart-btn {
-  cursor: pointer;
-  margin-right: 30px;
-  background-color: black;
+.nav-left-container form input:focus {
+  background-color: #151515;
+}
+
+/* Search form position styles */
+.search-form {
+  position: relative;
+}
+.search-btn {
+  position: absolute;
+  right: 350px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
   color: lightgrey;
   font-weight: 900;
   border: none;
   outline: none;
-  padding: 0;
-  font: inherit;
-  text-align: inherit;
+  cursor: pointer;
 }
 
-.login-modal {
-  display: none;
+/* Custom styles for the navbar toggler button */
+.navbar-toggler {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+  box-shadow: none;
+}
+
+/* Offcanvas custom width */
+.offcanvas {
+  width: 70% !important;
+}
+
+/* Custom margin-top utility */
+.custom-mt {
+  margin-top: 54.24px;
+}
+
+/* -------------------------
+     RESPONSIVE STYLES
+  ------------------------- */
+
+/* Styles for small screens: center the logo */
+@media (max-width: 767.98px) {
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* -------------------------
+     LOGIN MODAL STYLES
+  ------------------------- */
+
+/* Modal container full-screen */
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal content styles */
+.modal-content {
+  background-color: #fbfbfb;
   position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.login-modal .container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 500px;
   height: 400px;
-  background-color: #fbfbfb;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1001;
-  gap: 20px;
+  padding: 2rem;
+  transform: translate(-50%, -50%);
 }
 
-.login-modal .container > :first-child {
+/* Styles for the first child in the modal (usually a close button or icon) */
+.modal-content > :first-child {
   align-self: flex-end;
   cursor: pointer;
-  height: 40px;
+  height: 10px;
 }
 
-.login-modal .container > :not(:first-child) {
-  align-self: center;
+/* Modal header styles */
+.modal-header {
+  border: none;
 }
 
-.header_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 40px;
-  width: 100%;
-  padding: 0 20px;
-}
-
-.header_container .new_account_container {
+.modal-header span {
   font-size: smaller;
   color: lightslategrey;
 }
 
-.header_container .new_account_container a {
+.modal-header span a {
   text-decoration: underline;
   font-weight: 700;
   color: rgb(128, 128, 128);
   cursor: pointer;
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  height: 180px;
-  padding: 0 20px;
-}
-
+/* Input container positioning */
 .input-container {
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
-.input-container label {
+/* Floating label styles */
+.form-label {
   position: absolute;
-  background: white;
-  padding: 0 5px;
-  font-size: 18px;
-  color: darkgrey;
-  left: 20px;
+  background-color: white;
+  left: 30px;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none; /* 使label不会拦截鼠标事件 */
+  font-size: 16px;
+  color: grey;
+  pointer-events: none;
   transition: all 0.3s;
 }
-.input-container input {
-  height: 100%;
+
+.input-container input::placeholder {
+  color: grey;
+}
+
+/* Styles when input is focused */
+.input-container.focused .form-label {
+  top: 0;
+  left: 20px;
+  font-size: 10px;
+  color: darkgrey;
+}
+
+.input-container.focused input::placeholder {
+  color: transparent;
+}
+
+/* Form control custom styles */
+.form-control {
+  height: 60px;
   width: 100%;
   border: 0.5px solid lightgrey;
   border-radius: 5px;
@@ -192,36 +198,23 @@ nav {
   box-shadow: none;
 }
 
-.input-container.focused label {
-  top: -6px;
-  left: 10px;
-  font-size: 12px;
-  transform: translateY(0);
+/* Transition for the button in modal body */
+.modal-body form .btn {
+  transition: background-color 0.3s ease-out;
 }
 
-.input-container input:focus {
-  outline: none;
-  border-color: lightgrey;
+.modal-body form .btn:hover {
+  background-color: whitesmoke;
 }
 
-.submit-btn {
-  width: 20%;
-  padding: 10px;
-  border: none;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
+/* Styles for the forgot password link */
 .forgot-password {
-  display: block;
   font-size: 12px;
   color: rgb(128, 128, 128);
-  text-align: center;
   text-decoration: underline;
   cursor: pointer;
 }
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
