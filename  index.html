@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team 5</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link href="style.css" rel="stylesheet" />
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <!--------Google Fonts------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Mulish:wght@300&family=Oswald:wght@300;700&family=Sora&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!--------------------------------------------------------------------------------------------->
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav-section">
+          <div class="nav_left_container">
+            <div class="logo">
+              <img
+                src="img/logo_white_final.png"
+                alt="Website Logo"
+                width="150"
+                height="50"
+              />
+            </div>
+            <div class="item">
+              <label id="input_search">Browser</label>
+              <input
+                type="text"
+                id="input_search"
+                placeholder="🔍 What do you want to learn?"
+              />
+            </div>
+          </div>
+          <!-- end of nav_right_container -->
+
+          <div class="nav_right_container">
+            <button class="cart-btn">🛒</button>
+            <button class="login-btn">Login</button>
+          </div>
+        </div>
+        <!-- end of .nav_container -->
+      </nav>
+
+      <div class="login-modal">
+        <div class="container">
+          <div class="close_tag_container">
+            <span class="close-btn">&times;</span>
+          </div>
+
+          <div class="header_container">
+            <div class="modal_label_container">
+              <h2 class="login-title">Login</h2>
+            </div>
+
+            <div class="new_account_container">
+              <span>New here? <a href="#">Create Account</a></span>
+            </div>
+          </div>
+          <!-- end of .header_container-->
+
+          <form class="login-form">
+            <div class="input-container">
+              <input
+                type="email"
+                required
+                autofocus
+                id="email"
+                onfocus="activateLabel(this)"
+                onblur="deactivateLabel(this)"
+              />
+              <label for="email">Email</label>
+            </div>
+            <div class="input-container">
+              <input
+                type="password"
+                id="password"
+                required
+                onfocus="activateLabel(this)"
+                onblur="deactivateLabel(this)"
+              />
+              <label for="password">Password</label>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+          </form>
+
+          <div class="forget_password_container">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+        </div>
+        <!-- end of .modal_container -->
+      </div>
+      <!-- end of login_modal -->
+    </div>
+    <!-- end of .body_container -->
+    <script src="scripts.js"></script>
+    <!--------------------------------------------------------------------------------------------->
+
+    <section class="banner">
+      <img src="img/Banner.jpg" alt="laptop" />
+      <h1 class="center">
+        Start coding <br />
+        start learning <br />
+        start CodeWise!
+      </h1>
+    </section>
+    <!--------------------------------------------------------------------------------------------->
+
+    <section class="news">
+      <a href="product.html"
+        >Back to School Sales: Get 10% off on all courses until September
+        30th!</a
+      >
+    </section>
+    <!--------------------------------------------------------------------------------------------->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div data-aos="fade-up">
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              Begin Your Journey Today! Join CodeWise for an enriching coding
+              odyssey. Open doors to innovation, creativity, and countless
+              opportunities. Unleash your coding potential with us!
+            </p>
+            <ul>
+              <li>
+                <i class="ri-check-double-line"></i> 🚀 Empower Your Journey:
+                From comprehensive beginner courses to advanced projects, our
+                tools propel your coding journey.
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> 🎓 Expert Instructors: Gain
+                insights from industry pros. Learn practical skills from those
+                who've walked the path.
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> 🛒 Easy Access: Learn
+                anywhere, anytime, on any device.
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Unleash Your Coding Potential! At CodeWise, we're your ultimate
+              destination for programming mastery. Whether you're a beginner or
+              a seasoned developer, our platform caters to every level of
+              expertise.
+            </p>
+            <a href="#" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Us Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimo" class="testimonial section-bg">
+      <div data-aos="fade-up">
+        <div class="section-title">
+          <h2>Testimonials</h2>
+        </div>
+
+        <div class="row">
+          <div
+            class="col-xl-3 col-md-6 d-flex align-items-stretch"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4>Maxime White</h4>
+              <p>
+                "Thanks to this online course, I've mastered HTML for
+                structuring web content, CSS for styling, and Bootstrap for
+                responsive design. Highly recommended!"
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4>Sharon Wang</h4>
+              <p>
+                "This course made learning a breeze. I can now create beautiful,
+                responsive websites effortlessly!"
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4>Connor Bornn</h4>
+              <p>
+                "Perfect for busy professionals!! I learned HTML and CSS with
+                CodeWise at my own pace. Now I'm a web design pro, all thanks to
+                this course!"
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-layer"></i></div>
+              <h4>Adam Avery</h4>
+              <p>
+                "CodeWise is an excellent starting point for web development and
+                design!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Services Section -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

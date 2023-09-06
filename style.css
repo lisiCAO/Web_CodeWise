@@ -1,0 +1,416 @@
+/* File: login_page.html
+    Author: Lisi Cao
+    Date: August 31, 2023
+    Description: click button "login", turn to page login.
+    Contact: lisi.cao@johnabbottcollege.net
+    Copyright: 2023 
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: "Montserrat";
+  font-size: 16px;
+  inline-size: 1.5;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Nav Section
+--------------------------------------------------------------*/
+.container {
+  max-width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  background-color: black;
+  width: 100%;
+  height: 60px;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: lightgrey;
+  height: 60px;
+}
+
+.nav_left_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.nav_left_container .item {
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav_left_container input {
+  margin-left: 30px;
+  background-color: #151515;
+  border-radius: 25px;
+  font-size: smaller;
+  width: 300px;
+  height: 40px;
+  text-indent: 20px;
+  border: 0.5px solid #151515;
+  outline: none;
+  box-shadow: none;
+}
+
+.nav_right_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login-btn,
+.cart-btn {
+  cursor: pointer;
+  margin-right: 30px;
+  background-color: black;
+  color: lightgrey;
+  font-weight: 900;
+  border: none;
+  outline: none;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+}
+
+.login-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.login-modal .container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 400px;
+  background-color: #fbfbfb;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  gap: 20px;
+}
+
+.login-modal .container > :first-child {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 40px;
+}
+
+.login-modal .container > :not(:first-child) {
+  align-self: center;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.header_container .new_account_container {
+  font-size: smaller;
+  color: lightslategrey;
+}
+
+.header_container .new_account_container a {
+  text-decoration: underline;
+  font-weight: 700;
+  color: rgb(128, 128, 128);
+  cursor: pointer;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 180px;
+  padding: 0 20px;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.input-container label {
+  position: absolute;
+  background: white;
+  padding: 0 5px;
+  font-size: 18px;
+  color: darkgrey;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* 使label不会拦截鼠标事件 */
+  transition: all 0.3s;
+}
+.input-container input {
+  height: 100%;
+  width: 100%;
+  border: 0.5px solid lightgrey;
+  border-radius: 5px;
+  text-indent: 20px;
+  outline: none;
+  box-shadow: none;
+}
+
+.input-container.focused label {
+  top: -6px;
+  left: 10px;
+  font-size: 12px;
+  transform: translateY(0);
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: lightgrey;
+}
+
+.submit-btn {
+  width: 20%;
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  display: block;
+  font-size: 12px;
+  color: rgb(128, 128, 128);
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.banner img {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  background-size: cover;
+}
+
+.center {
+  position: absolute;
+  top: 10%;
+  padding-left: 5%;
+  font-family: "Oswald";
+  font-size: 5.9vw;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+/*--------------------------------------------------------------
+news Section
+--------------------------------------------------------------*/
+
+.news {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 20px;
+  background-color: rgba(32, 178, 171, 0.2);
+  background-size: 100%;
+  text-decoration: none;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.news a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.news:hover {
+  text-decoration: underline;
+  background-color: rgb(193, 238, 223);
+}
+
+/*--------------------------------------------------------------
+# About us Section
+--------------------------------------------------------------*/
+
+#about {
+  padding-bottom: 80px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.about .content ul {
+  list-style: none;
+}
+
+.about .content ul li {
+  padding-left: 28px;
+  position: relative;
+}
+
+.about .content ul li + li {
+  margin-top: 10px;
+}
+
+.about .content ul i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: #47b2e4;
+  line-height: 1;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about .content .btn-learn-more {
+  font-family: "montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #47b2e4;
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid #47b2e4;
+}
+
+.about .content .btn-learn-more:hover {
+  background: #47b2e4;
+  color: #fff;
+  text-decoration: none;
+}
+
+.content h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-weight: 800;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+.main-body {
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: "montserrat";
+  font-weight: 300;
+  font-size: large;
+  background-color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  padding-top: 5%;
+  font-size: 40px;
+  font-family: "oswald";
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #37517e;
+}
+
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+#testimo {
+  background-color: #244c915c;
+  padding-bottom: 80px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.testimonial .icon-box {
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  transition: all ease-in-out 0.4s;
+  background: #fff;
+  border: #74787c48 solid;
+}
+
+.testimonial .icon-box .icon {
+  margin-bottom: 10px;
+}
+
+.testimonial .icon-box .icon i {
+  color: #47b2e4;
+  font-size: 36px;
+  transition: 0.3s;
+}
+
+.testimonial .icon-box h4 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.testimonial.icon-box p {
+  line-height: 24px;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.testimonial .icon-box:hover {
+  transform: translateY(-10px);
+}
