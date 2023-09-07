@@ -30,7 +30,10 @@ out/
 
 # System files
 .DS_Store
+<<<<<<< HEAD
 **/.DS_Store
+=======
+>>>>>>> f62d0a8 (final web)
 Thumbs.db
 
 # Temporary files
