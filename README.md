@@ -30,3 +30,8 @@ We welcome contributions from anyone interested in improving the website's conte
 ## License
 
 This project is licensed under the [MIT License](LICENSE). See the LICENSE file for more details.
+<img width="1323" alt="CodeWise-product-detail" src="https://github.com/lisiCAO/Web_CodeWise/assets/137085653/e3b33cd6-2334-46dc-a68c-6478b3e45ceb">
+<img width="1323" alt="CodeWise-payment" src="https://github.com/lisiCAO/Web_CodeWise/assets/137085653/80190c65-737a-486a-96b9-8807b1f15aac">
+<img width="1323" alt="CodeWise-Aboutus" src="https://github.com/lisiCAO/Web_CodeWise/assets/137085653/b70785da-664c-45b0-acd5-6247ab8e23ae">
+<img width="1323" alt="CodeWise-login" src="https://github.com/lisiCAO/Web_CodeWise/assets/137085653/3f534e05-afca-467f-b19d-a76fe96020d8">
+<img width="1323" alt="CodeWIse-home" src="https://github.com/lisiCAO/Web_CodeWise/assets/137085653/4a5a79ca-2f1f-44fd-b26d-8dcca1d70c27">
